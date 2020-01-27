@@ -1,9 +1,13 @@
-  <div class="container">
+
+  <div class="container" style="width:455px; margin-right:150px; margin-top:150px;">
 <form [formGroup]="userFormGroup">
+  <div>
+    <label class="header1">Create a New Account    </label>
+  </div>
   <div class="form-group">
     <div class="row" style=" margin-left:0px;">
     <input type="text" class="form-control" formControlName="firstName"
-     placeholder="First Name" style="width:280px;">&nbsp;&nbsp;
+     placeholder="First Name" style="width:200px;">&nbsp;&nbsp;
     <input type="text" class="form-control" formControlName="lastName" placeholder="Surname"  style="width:215px;">
     </div>
   </div> 
@@ -16,8 +20,8 @@
   	<div class="form-group">
       <label for="exampleInputEmail1">Birthday</label><br>
       <div class="row" style=" margin-left:0px;">
-				<select formControlName="day" class="form-control" style="width:160px;">
-          <option value="0" disabled>Day</option>
+				<select formControlName="day" class="form-control" style="width:105px;">
+          <option  disabled>Day</option>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -31,8 +35,8 @@
           <option>11</option>
           <option>12</option>
         </select>&nbsp;&nbsp;
-				<select  formControlName="month" class="form-control" style="width:165px">
-          <option value="0" disabled>Month</option>
+				<select  formControlName="month" class="form-control" style="width:105px">
+          <option  disabled>Month</option>
           <option>JAN</option>
           <option>FEB</option>
           <option>MAR</option>
@@ -46,8 +50,8 @@
           <option>NOV</option>
           <option>DEC</option>
         </select>&nbsp;&nbsp;
-				<select formControlName="year" class="form-control" style="width:165px">
-          <option value="0" disabled>Year</option>
+				<select formControlName="year" class="form-control" style="width:105px">
+          <option disabled>Year</option>
           <option>2010</option>
           <option>2009</option>
           <option>2007</option>
@@ -66,10 +70,10 @@
   <div class="form-group">
     <label for="exampleInputEmail1">Gender</label><br>
     <input type="radio"formControlName="gender" name="gender" value="male">Male
-    <input type="radio" formControlName="gender" name="gender">female
-    <input type="radio" formControlName="gender" name="gender">Custom
+    <input type="radio" formControlName="gender" name="gender" value="female">female
+    <input type="radio" formControlName="gender" name="gender" value="custom">Custom
   </div>
-  <button (click)="submit()" class="btn btn-primary">Submit</button>
+  <button (click)="submit()" class="btn btn-primary" style="background-color:#69a74e">Sign Up</button>
 </form>
   </div>
 

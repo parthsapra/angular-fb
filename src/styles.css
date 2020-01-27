@@ -2,6 +2,13 @@
     background-color:#DA5235;
     color:white;
   }
+body{
+  background-color: blue;
+}
+  .header1{
+    font-family:cursive;
+    font-size: xx-large;
+  }
 
  select.ng-invalid{
     background-color:#DA5235;

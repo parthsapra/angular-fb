@@ -19,9 +19,9 @@ export class AppComponent implements OnInit {
       lastName: ['',Validators.required],
       email: ['',Validators.required],
       password: ['',Validators.required],
-      day: ['',Validators.required],
-      month: ['',Validators.required],
-      year:['',Validators.required],
+      day: ['Day',Validators.required],
+      month: ['Month',Validators.required],
+      year:['Year',Validators.required],
       gender:['',Validators.required]
     })
   }
