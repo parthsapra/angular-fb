@@ -1,18 +1,22 @@
-<div class="container">
-<form>
+  <div class="container">
+<form [formGroup]="userFormGroup">
   <div class="form-group">
-    <input type="text" class="form-control" [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}" placeholder="First Name">
-    <input type="text" class="form-control" [(ngModel)]="user.lastName" [ngModelOptions]="{standalone: true}" placeholder="Surname">
+    <div class="row" style=" margin-left:0px;">
+    <input type="text" class="form-control" formControlName="firstName"
+     placeholder="First Name" style="width:280px;">&nbsp;&nbsp;
+    <input type="text" class="form-control" formControlName="lastName" placeholder="Surname"  style="width:215px;">
+    </div>
   </div> 
   <div class="form-group">
-    <input type="text" class="form-control" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" placeholder="Email or mobile no">
+    <input type="text" class="form-control" formControlName="email" placeholder="Email or mobile no">
   </div>
   <div class="form-group">
-    <input type="password" class="form-control" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="New Password">
+    <input type="password" class="form-control" formControlName="password" placeholder="New Password">
   </div>
   	<div class="form-group">
       <label for="exampleInputEmail1">Birthday</label><br>
-				<select [(ngModel)]="user.day"[ngModelOptions]="{standalone: true}">
+      <div class="row" style=" margin-left:0px;">
+				<select formControlName="day" class="form-control" style="width:160px;">
           <option value="0" disabled>Day</option>
           <option>1</option>
           <option>2</option>
@@ -26,8 +30,8 @@
           <option>10</option>
           <option>11</option>
           <option>12</option>
-        </select>
-				<select  [(ngModel)]="user.month"[ngModelOptions]="{standalone: true}">
+        </select>&nbsp;&nbsp;
+				<select  formControlName="month" class="form-control" style="width:165px">
           <option value="0" disabled>Month</option>
           <option>JAN</option>
           <option>FEB</option>
@@ -41,8 +45,8 @@
           <option>OCT</option>
           <option>NOV</option>
           <option>DEC</option>
-        </select>
-				<select [(ngModel)]="user.year"[ngModelOptions]="{standalone: true}">
+        </select>&nbsp;&nbsp;
+				<select formControlName="year" class="form-control" style="width:165px">
           <option value="0" disabled>Year</option>
           <option>2010</option>
           <option>2009</option>
@@ -57,13 +61,15 @@
           <option>1999</option>
           <option>1998</option>
         </select>
+      </div>
         </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Gender</label><br>
-    <input type="radio" [(ngModel)]="user.gender" [ngModelOptions]="{standalone: true}" name="gender" value="male">Male
-    <input type="radio" [(ngModel)]="user.gender" [ngModelOptions]="{standalone: true}" name="gender">female
-    <input type="radio" [(ngModel)]="user.gender" [ngModelOptions]="{standalone: true}" name="gender">Custom
+    <input type="radio"formControlName="gender" name="gender" value="male">Male
+    <input type="radio" formControlName="gender" name="gender">female
+    <input type="radio" formControlName="gender" name="gender">Custom
   </div>
   <button (click)="submit()" class="btn btn-primary">Submit</button>
 </form>
-</div>
+  </div>
+
