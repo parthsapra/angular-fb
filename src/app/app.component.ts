@@ -26,6 +26,10 @@ export class AppComponent implements OnInit {
     })
   }
   submit() {
+    if(!this.userFormGroup.controls["firstName"].valid){
+      alert("oops somthing wrong!!");
+    }
+    else
     console.log(this.userFormGroup.value);
   }
 }
